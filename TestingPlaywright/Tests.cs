@@ -11,7 +11,7 @@ namespace TestingPlaywright
         public async Task OperatorAuthorization()
         {
             var chrome = Playwright.Chromium;
-            var browser = await chrome.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
+            var browser = await chrome.LaunchAsync(new BrowserTypeLaunchOptions { Headless = true });
             var page = await browser.NewPageAsync();
             await page.GotoAsync($"https://vg.no");
 
