@@ -4,20 +4,19 @@ on:
     branches:
       - main
 jobs:
-  test:
-    timeout-minutes: 60
+  playwright:
+    name: 'Playwright Tests'
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.30.0-focal
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '18.x'
-    - name: Install Playwright
-      run: npx playwright install --with-deps
-    - name: Install playwright tests
-      run: npm install -D @playwright/test
-    - name: Run Playwright tests
-      run: npx playwright test
-      env:
-        # This might depend on your test-runner/language binding
-        PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
+      - uses: actions/checkout@v3
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+      - run: dotnet build 
+      - name: Ensure browsers are installed
+        run: pwsh bin\Debug\net6.0\playwright.ps1 install --with-deps
+      - name: Run your tests
+        run: dotnet test ./TestingPlaywright
