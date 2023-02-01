@@ -14,6 +14,8 @@ jobs:
         node-version: '18.x'
     - name: Install Playwright
       run: npx playwright install --with-deps
+    - name: Install playwright tests
+      run: npm install -D @playwright/test
     - name: Run Playwright tests
       run: npx playwright test
       env:
