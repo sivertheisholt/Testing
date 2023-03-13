@@ -22,5 +22,9 @@ jobs:
         run: dotnet restore ./TestingxUnit/TestingxUnit.csproj
       - name: Build
         run: dotnet build ./TestingxUnit/TestingxUnit.csproj --configuration Release --no-restore
+      - name: Get font sources
+        run: sed -i'.bak' 's/$/ contrib/' /etc/apt/sources.list
+      - name: Install mscore-fonts
+        run: apt-get update; apt-get install -y ttf-mscorefonts-installer fontconfig
       - name: Test
         run: dotnet test ./TestingxUnit/TestingxUnit.csproj --no-restore --verbosity normal
