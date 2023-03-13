@@ -30,6 +30,8 @@ public static class QrCodeGeneration
     }
     public static Font CreateFont(int size)
     {
-        return SystemFonts.CreateFont("Arial", size, FontStyle.Regular);
+        FontCollection collection = new();
+        FontFamily family = collection.Add("./fonts/testFont.ttf");
+        return family.CreateFont(size, FontStyle.Regular);
     }
 }

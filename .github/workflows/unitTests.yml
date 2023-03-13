@@ -14,12 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install mscore-fonts
-        run: sudo apt-get update; sudo apt-get install -y ttf-mscorefonts-installer fontconfig
-      - name: Remove cache
-        run: sudo fc-cache -f -v
-      - name: Reboot?
-        run: sudo reboot
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v3
         with:
