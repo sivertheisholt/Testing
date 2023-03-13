@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install mscore-fonts
-        run: sudo apt-get update; apt-get install -y ttf-mscorefonts-installer fontconfig
+        run: sudo apt-get update; sudo apt-get install -y ttf-mscorefonts-installer fontconfig
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v3
         with:
