@@ -19,7 +19,7 @@ jobs:
       - name: Remove cache
         run: sudo fc-cache -f
       - name: Remove cache
-        run: sudo cp *.ttf *.TTF ~/usr/local/share/fonts/
+        run: sudo cp *.ttf *.TTF /usr/local/share/fonts/
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v3
         with:
