@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingPlaywright", "Testin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingxUnit", "TestingxUnit\TestingxUnit.csproj", "{4A4F9BB3-55F2-4A3E-979A-3717BB62ACEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionAppTest", "FunctionAppTest\FunctionAppTest.csproj", "{2445E057-01B3-4523-99C5-153685C31015}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
