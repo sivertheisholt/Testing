@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: dotnet restore ./FunctionAppTest/FunctionAppTest.csproj
       - name: Build
-        run: dotnet build ./FunctionAppTest/FunctionAppTest.csproj --configuration Release --no-restore
+        run: dotnet build ./FunctionAppTest/FunctionAppTest.csproj --configuration Release --no-restore --output ./output
       - name: "Run Azure Functions action"
         uses: Azure/functions-action@v1
         with:
