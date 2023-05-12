@@ -2,8 +2,8 @@ name: Publish function
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - FunctionAppTest/**
 
 env:
   AZURE_FUNCTIONAPP_NAME: sivert-function # set this to your application's name
