@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingPlaywright", "Testin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingxUnit", "TestingxUnit\TestingxUnit.csproj", "{4A4F9BB3-55F2-4A3E-979A-3717BB62ACEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingConsoleApp", "TestingConsoleApp\TestingConsoleApp.csproj", "{5AA0E40D-8CD5-4165-9038-5FD58A678F67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +23,10 @@ Global
 		{4A4F9BB3-55F2-4A3E-979A-3717BB62ACEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4F9BB3-55F2-4A3E-979A-3717BB62ACEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4F9BB3-55F2-4A3E-979A-3717BB62ACEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2445E057-01B3-4523-99C5-153685C31015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2445E057-01B3-4523-99C5-153685C31015}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2445E057-01B3-4523-99C5-153685C31015}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2445E057-01B3-4523-99C5-153685C31015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AA0E40D-8CD5-4165-9038-5FD58A678F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA0E40D-8CD5-4165-9038-5FD58A678F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA0E40D-8CD5-4165-9038-5FD58A678F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AA0E40D-8CD5-4165-9038-5FD58A678F67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
