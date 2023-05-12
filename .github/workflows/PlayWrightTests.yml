@@ -5,9 +5,9 @@ on:
     workflows: ["Unit Tests"]
     types:
       - completed
-  push:
     branches:
       - "main"
+      
 jobs:
   playwright:
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.ref == 'refs/heads/main' }}
