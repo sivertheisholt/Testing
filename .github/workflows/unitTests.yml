@@ -12,7 +12,7 @@ on:
     types:
       - opened
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   build:
