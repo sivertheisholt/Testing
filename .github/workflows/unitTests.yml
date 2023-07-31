@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    if: ${{ startsWith(github.head_ref, 'release/') || startsWith(github.head_ref, 'main') }}
+    if: ${{ github.head_ref == 'mrelease/**' || github.head_ref == 'main' }}
     runs-on: ubuntu-20.04
     strategy:
       matrix:
