@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    if:  startsWith(github.head_ref, 'release/')
+    if:  startsWith(github.head_ref, 'release/') || startsWith(github.head_ref, 'master')
     runs-on: ubuntu-20.04
     strategy:
       matrix:
