@@ -9,7 +9,8 @@ on:
       - TestingxUnit/**
       - TestingConsoleApp/**
   pull_request:
-    # Sequence of patterns matched against refs/heads
+    types:
+      - opened
     branches:    
       - 'release/**'
 
