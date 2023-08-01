@@ -8,10 +8,11 @@ on:
   pull_request:
     types:
       - opened
+      - edited
 
 jobs:
   build:
-    if: ${{ github.head_ref == 'release/**' || github.head_ref == ''}}
+    if: ${{ startsWith(github.head_ref, 'release/') || github.head_ref == ''}}
     runs-on: ubuntu-20.04
     strategy:
       matrix:
