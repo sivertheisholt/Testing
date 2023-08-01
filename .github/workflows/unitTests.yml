@@ -2,10 +2,6 @@ name: Unit Tests
 
 on:
   push:
-    branches:
-      - "release/**"
-      - "stage"
-      - "main"
   pull_request:
     types:
       - opened
