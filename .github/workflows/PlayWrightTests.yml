@@ -9,7 +9,7 @@ on:
       
 jobs:
   playwright:
-    if: github.event.pull_request.merged == true
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: "Playwright Tests"
     runs-on: ubuntu-latest
     container:
