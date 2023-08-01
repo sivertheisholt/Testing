@@ -6,9 +6,6 @@ on:
       - "release/**"
       - "stage"
       - "main"
-  pull_request:
-    types:
-      - opened
       
 jobs:
   playwright:
