@@ -24,7 +24,7 @@ jobs:
 
       - name: Ensure browsers are installed
         env:
-          HTTPS_PROXY: https://192.0.2.1
+          PLAYWRIGHT_DOWNLOAD_HOST: https://192.0.2.1
         run: | 
           pwsh TestingPlaywright/bin/Debug/net7.0/playwright.ps1 install --with-deps
 
