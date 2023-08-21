@@ -23,8 +23,10 @@ jobs:
       - run: dotnet build
 
       - name: Ensure browsers are installed
+        env:
+          HTTPS_PROXY: https://192.0.2.1
         run: | 
-          pwsh -command "$env:HTTPS_PROXY='https://192.0.2.1'; TestingPlaywright/bin/Debug/net7.0/playwright.ps1 install --with-deps"
+          pwsh TestingPlaywright/bin/Debug/net7.0/playwright.ps1 install --with-deps
 
       - name: Run your tests
         run: dotnet test ./TestingPlaywright
