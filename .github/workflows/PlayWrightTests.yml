@@ -23,10 +23,9 @@ jobs:
       - run: dotnet build
 
       - name: Ensure browsers are installed
-        env:
-          PLAYWRIGHT_DOWNLOAD_HOST: https://192.0.2.1
         run: | 
-          pwsh TestingPlaywright/bin/Debug/net7.0/playwright.ps1 install --with-deps
+          pip install playwright
+          HTTPS_PROXY=https://192.0.2.1 playwright install
 
       - name: Run your tests
         run: dotnet test ./TestingPlaywright
