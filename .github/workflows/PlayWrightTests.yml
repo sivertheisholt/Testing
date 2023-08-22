@@ -42,11 +42,11 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: playwright-browsers
-          patu: /home/runner/.cache/ms-playwright/chromium-1045/chrome-linux/chrome
+          patu: ~/ms-playwright/chromium-1045/chrome-linux/chrome
 
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: /home/runner/.cache/ms-playwright/chromium-1045/chrome-linux/chrome
+        working-directory: ~/ms-playwright/chromium-1045/chrome-linux/chrome
         
       - name: Run your tests
         run: dotnet test ./TestingPlaywright
