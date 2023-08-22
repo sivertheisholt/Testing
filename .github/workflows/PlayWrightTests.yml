@@ -52,6 +52,9 @@ jobs:
         with:
           name: playwright-browsers
           path: /ms-playwright/chromium-1045/chrome-linux
+          
+      - name: Open chrome permission
+        run: sudo chmod 777 /ms-playwright/chromium-1045/chrome-linux/chrome
 
       - name: Display structure of downloaded files
         run: ls -R
