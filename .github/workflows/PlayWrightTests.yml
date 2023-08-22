@@ -41,16 +41,19 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Make folder
-        run: sudo mkdir -p /ms-playwright/chromium-1045/chrome-linux/chrome
+        run: sudo mkdir -p /ms-playwright/chromium-1045/chrome-linux
+
+      - name: Open folder permission
+        run: sudo chmod -R 777 /ms-playwright/chromium-1045/chrome-linux
         
       - uses: actions/download-artifact@v3
         with:
           name: playwright-browsers
-          path: /ms-playwright/chromium-1045/chrome-linux/chrome
+          path: /ms-playwright/chromium-1045/chrome-linux
 
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: /ms-playwright/chromium-1045/chrome-linux/chrome
-        
+        working-directory: /ms-playwright/chromium-1045/chrome-linux
+      
       - name: Run your tests
         run: dotnet test ./TestingPlaywright
