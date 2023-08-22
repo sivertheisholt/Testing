@@ -41,7 +41,7 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Make folder
-        run: mkdir -p /ms-playwright/chromium-1045/chrome-linux/chrome
+        run: sudo mkdir -p /ms-playwright/chromium-1045/chrome-linux/chrome
         
       - uses: actions/download-artifact@v3
         with:
