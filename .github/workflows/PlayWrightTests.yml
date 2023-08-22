@@ -33,6 +33,8 @@ jobs:
     name: "Playwright Tests"
     runs-on: ubuntu-latest
     needs: playwright_browser
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright/chromium-1045/chrome-linux
     steps:
       - uses: actions/checkout@v3
       - name: Setup dotnet
