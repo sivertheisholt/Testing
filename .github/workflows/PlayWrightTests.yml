@@ -36,7 +36,7 @@ jobs:
     env:
       PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
     container:
-      image: mcr.microsoft.com/playwright/dotnet:v1.30.0-focal
+      image: mcr.microsoft.com/playwright/dotnet:v1.31.1-focal
     steps:
       - uses: actions/checkout@v3
       - name: Setup dotnet
